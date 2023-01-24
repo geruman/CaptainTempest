@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 1868071710}
   - component: {fileID: 1868071709}
   m_Layer: 0
-  m_Name: SpriteAnimation
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
