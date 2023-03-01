@@ -14,11 +14,11 @@ public class BackgroundParalaxMono : MonoBehaviour
     void Update()
     {
         
-        if (transform.position.x<=-21.29)
+        if (transform.position.x<=-16.9f)
         {
-            transform.position = new Vector2(21.29f, 0);
+            transform.position = new Vector2(30.9f, transform.position.y);
         }
-        Vector2 newPosition = new Vector2(transform.position.x+ (-3*Time.deltaTime), 0);
+        Vector2 newPosition = new Vector2(transform.position.x+ (-3*Time.deltaTime), transform.position.y);
         transform.position = newPosition;
     }
     

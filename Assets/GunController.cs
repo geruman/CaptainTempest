@@ -6,10 +6,11 @@ public class GunController : MonoBehaviour
 {
     public BulletType1Mono bullet;
     Vector2 direction;
+    public bool isEnabled = false;
+    
     // Start is called before the first frame update
     void Start()
     {
-       
     }
 
     // Update is called once per frame
@@ -19,8 +20,11 @@ public class GunController : MonoBehaviour
     }
     public void Shoot()
     {
-        GameObject go = Instantiate(bullet.gameObject, transform.position,Quaternion.identity);
-        BulletType1Mono goBullet = go.GetComponent<BulletType1Mono>();
-        goBullet.direction = direction;
+        if (isEnabled)
+        {
+            GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
+            BulletType1Mono goBullet = go.GetComponent<BulletType1Mono>();
+            goBullet.direction = direction;
+        }
     }
 }

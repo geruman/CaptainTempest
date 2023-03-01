@@ -24,6 +24,7 @@ public class PlayerMono : MonoBehaviour
     {
         animationAnimator = spriteGameObject.GetComponent<Animator>();
         guns = transform.GetComponentsInChildren<GunController>();
+        
     }
 
     // Update is called once per frame
