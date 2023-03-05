@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class Enemy2MovementController : MonoBehaviour
+public class Enemy2MovementController : Enemy
 {
     public float speed = 3f;
     public float startingY;

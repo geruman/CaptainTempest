@@ -27,7 +27,10 @@ public class BulletType1Mono : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.gameObject);
+        Enemy enemy = collision.GetComponent<Enemy>();
+        if (enemy!=null && enemy.isActive()) { 
+            Destroy(collision.gameObject);
+        }
         Destroy(gameObject);
     }
 
