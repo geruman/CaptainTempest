@@ -27,6 +27,7 @@ public class Enemy2MovementController : MonoBehaviour
         float y = Mathf.Sin(position.x * frequency) * amplitude;
         Vector2 movement = new Vector2(x, y);
         transform.position = new Vector2(movement.x+position.x,movement.y+startingY);
+        //transform.Translate(new Vector2(x,y-transform.position.y));
         if (transform.position.x<-18)
         {
             Destroy(gameObject);
