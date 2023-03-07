@@ -11,6 +11,7 @@ public class GunController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -23,6 +24,15 @@ public class GunController : MonoBehaviour
         if (isEnabled)
         {
             GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
+            BulletType1Mono goBullet = go.GetComponent<BulletType1Mono>();
+            goBullet.direction = direction;
+        }
+    }
+    public void Shoot(Quaternion rotation)
+    {
+        if (isEnabled)
+        {
+            GameObject go = Instantiate(bullet.gameObject, transform.position, rotation);
             BulletType1Mono goBullet = go.GetComponent<BulletType1Mono>();
             goBullet.direction = direction;
         }

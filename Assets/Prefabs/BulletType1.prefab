@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6735931415115780010}
   - component: {fileID: 4522833857941219108}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0.8670927, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 7064473571967085636}
   - component: {fileID: 2827926941184620735}
   - component: {fileID: 8578983171062102754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletType1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

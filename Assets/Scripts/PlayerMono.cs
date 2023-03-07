@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMono : MonoBehaviour
 {
@@ -144,5 +145,16 @@ public class PlayerMono : MonoBehaviour
         }
 
         return newPosition;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(gameObject);
+        //StartCoroutine(WaitAndRestart());
+    }
+    IEnumerator WaitAndRestart()
+    {
+        
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(0);
     }
 }
