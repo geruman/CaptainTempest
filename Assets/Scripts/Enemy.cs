@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     
-    public bool isActive()
+    virtual public bool isActive()
     {
         return (transform.position.x < 9.3f);
     }
