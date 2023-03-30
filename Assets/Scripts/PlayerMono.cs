@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMono : MonoBehaviour
 {
+    public GameController controller;
     GunController[] guns;
     private const float TOP_LIMIT = 4f;
     private const float BOTTOM_LIMIT = -4.5f;
@@ -25,18 +26,26 @@ public class PlayerMono : MonoBehaviour
     {
         animationAnimator = spriteGameObject.GetComponent<Animator>();
         guns = transform.GetComponentsInChildren<GunController>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (animationAnimator.GetBool("isDead"))
+        {
+            return;
+        }
         CheckPlayerInput();
 
     }
 
     private void FixedUpdate()
     {
+        if (animationAnimator.GetBool("isDead"))
+        {
+            return;
+        }
         Vector2 positionMove = Vector2.zero;
         positionMove=CalculateMovement(positionMove);
         float maximunMoveMagnitud = speed * Time.fixedDeltaTime;
@@ -63,7 +72,7 @@ public class PlayerMono : MonoBehaviour
         if (shoot)
         {
             shoot = false;
-            foreach(GunController gun in guns)
+            foreach (GunController gun in guns)
             {
                 gun.Shoot();
             }
@@ -148,13 +157,17 @@ public class PlayerMono : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Destroy(gameObject);
-        //StartCoroutine(WaitAndRestart());
+        if (!animationAnimator.GetBool("isDead"))
+        {
+            animationAnimator.SetBool("isDead", true);
+            StartCoroutine(DestroySelf());
+        }
     }
-    IEnumerator WaitAndRestart()
+    public IEnumerator DestroySelf()
     {
-        
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(0);
+        yield return new WaitForSeconds(0.7f);
+        controller.WaitAndReload();
+        Destroy(gameObject);
     }
+
 }

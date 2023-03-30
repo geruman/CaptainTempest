@@ -119,4 +119,9 @@ public class FinalEnemyController : Enemy
             _delayShot = DEFAULT_DELAY_FOR_SHOT;
         }
     }
+
+    public override void Damaged(int amount)
+    {
+        throw new System.NotImplementedException();
+    }
 }

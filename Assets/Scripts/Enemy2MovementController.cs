@@ -10,8 +10,10 @@ public class Enemy2MovementController : Enemy
     public float amplitude = 1;
     public float frequency = 1;
     // Start is called before the first frame update
+    Animator animator;
     void Start()
     {
+        animator = GetComponent<Animator>();
         startingY = transform.position.y;
     }
 
@@ -32,5 +34,20 @@ public class Enemy2MovementController : Enemy
         {
             Destroy(gameObject);
         }
+    }
+
+    public override void Damaged(int amount)
+    {
+        speed = speed*0.5f;
+        gameObject.GetComponent<Collider2D>().enabled = false;
+
+        animator.SetBool("isDead", true);
+        StartCoroutine(Die());
+    }
+    private IEnumerator Die()
+    {
+        yield return new WaitForSeconds(0.7f);
+
+        Destroy(gameObject);
     }
 }

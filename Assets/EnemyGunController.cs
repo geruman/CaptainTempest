@@ -15,4 +15,14 @@ public class EnemyGunController : MonoBehaviour
         rb.AddForce(direction * 9, ForceMode2D.Impulse);
         
     }
+
+    public void Shoot(Vector3 direction)
+    {
+        GameObject bullet = Instantiate(enemyBulletPrefab, transform.position, transform.rotation);
+        Destroy(bullet, 3f);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        
+        rb.AddForce(direction * 6, ForceMode2D.Impulse);
+
+    }
 }
