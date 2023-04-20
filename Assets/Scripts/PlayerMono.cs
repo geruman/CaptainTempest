@@ -18,7 +18,7 @@ public class PlayerMono : MonoBehaviour
     private bool left;
     private bool right;
     Animator animationAnimator;
-    float speed = 3;
+    float speed = 5;
     private bool shoot;
 
     // Start is called before the first frame update

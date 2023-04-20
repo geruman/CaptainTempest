@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8afd6e018082e90468ce581dcb11ca0c
+guid: 22582e898e264ed4eb148a1965b27473
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LaserOne_0
+      name: finaleEnemy_vulnerable_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e146e183c7c1064bada77086a1575f2
-      internalID: 1740221596
+      spriteID: 7d29b6c820172ae4ba0c3d50bbfdeebf
+      internalID: -1242518307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaserOne_1
+      name: finaleEnemy_vulnerable_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 160
         y: 0
-        width: 32
-        height: 32
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6163068a6a37d64184a35f5ce2f7b3c
-      internalID: 1624773765
+      spriteID: f7ce9001ba8dc3446936afbd4fccd18c
+      internalID: -1752828702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finaleEnemy_vulnerable_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3e81349e8888c4199012f2664a72b2
+      internalID: 764401364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finaleEnemy_vulnerable_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8c865103766d64a9ab32db8cd568a6
+      internalID: -139289125
       vertices: []
       indices: 
       edges: []
@@ -157,8 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LaserOne_1: 1624773765
-      LaserOne_0: 1740221596
+      finaleEnemy_vulnerable_0: -1242518307
+      finaleEnemy_vulnerable_3: -139289125
+      finaleEnemy_vulnerable_1: -1752828702
+      finaleEnemy_vulnerable_2: 764401364
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

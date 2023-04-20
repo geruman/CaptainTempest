@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8afd6e018082e90468ce581dcb11ca0c
+guid: 83b201f8ae0a1664c96c430205cbc581
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LaserOne_0
+      name: pistolas_jefe_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,20 +113,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e146e183c7c1064bada77086a1575f2
-      internalID: 1740221596
+      spriteID: 2753b30a02107f94dbe40ffcc26a8ad5
+      internalID: 1268244863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaserOne_1
+      name: pistolas_jefe_1
       rect:
         serializedVersion: 2
         x: 32
@@ -134,14 +134,35 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6163068a6a37d64184a35f5ce2f7b3c
-      internalID: 1624773765
+      spriteID: 9f9c321232ba2214280e26953687baeb
+      internalID: 469611839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pistolas_jefe_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9dc9c7fb9896f542b1f8494fb10e6da
+      internalID: 70147802
       vertices: []
       indices: 
       edges: []
@@ -157,8 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LaserOne_1: 1624773765
-      LaserOne_0: 1740221596
+      pistolas_jefe_0: 1268244863
+      pistolas_jefe_2: 70147802
+      pistolas_jefe_1: 469611839
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

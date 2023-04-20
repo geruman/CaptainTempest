@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8afd6e018082e90468ce581dcb11ca0c
+guid: 939936c861e923643bcbf5cfc808a8f9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LaserOne_0
+      name: finalEnemy_hurt_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e146e183c7c1064bada77086a1575f2
-      internalID: 1740221596
+      spriteID: 2b6d1ea2060261444b23e9c085416947
+      internalID: -770014330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaserOne_1
+      name: finalEnemy_hurt_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 160
         y: 0
-        width: 32
-        height: 32
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6163068a6a37d64184a35f5ce2f7b3c
-      internalID: 1624773765
+      spriteID: 9021e04203df4bb45822b2b9a6696fa7
+      internalID: 574911838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalEnemy_hurt_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f547df0ebeb3d641865be8db3063bdd
+      internalID: -1132917547
       vertices: []
       indices: 
       edges: []
@@ -157,8 +178,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LaserOne_1: 1624773765
-      LaserOne_0: 1740221596
+      finalEnemy_hurt_1: 574911838
+      finalEnemy_hurt_2: -1132917547
+      finalEnemy_hurt_0: -770014330
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

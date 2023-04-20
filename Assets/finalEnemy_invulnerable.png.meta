@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8afd6e018082e90468ce581dcb11ca0c
+guid: cd954af7503f89f47bc7b51c996add35
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LaserOne_0
+      name: finalEnemy_invulnerable_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e146e183c7c1064bada77086a1575f2
-      internalID: 1740221596
+      spriteID: 5fdf1b8df5252704d855ab55da142a43
+      internalID: -1557101902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaserOne_1
+      name: finalEnemy_invulnerable_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 160
         y: 0
-        width: 32
-        height: 32
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6163068a6a37d64184a35f5ce2f7b3c
-      internalID: 1624773765
+      spriteID: 28c152f764aac1c498749576961152f2
+      internalID: 1721529224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalEnemy_invulnerable_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e8f7663221f894c80210e34acef262
+      internalID: -176875521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: finalEnemy_invulnerable_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131602c02bef87b498a1ddda109a5cf3
+      internalID: -301707133
       vertices: []
       indices: 
       edges: []
@@ -157,8 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      LaserOne_1: 1624773765
-      LaserOne_0: 1740221596
+      finalEnemy_invulnerable_1: 1721529224
+      finalEnemy_invulnerable_2: -176875521
+      finalEnemy_invulnerable_3: -301707133
+      finalEnemy_invulnerable_0: -1557101902
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
