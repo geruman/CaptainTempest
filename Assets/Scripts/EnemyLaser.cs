@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,5 +43,10 @@ public class EnemyLaser : MonoBehaviour
     {
         if (laser!=null)
             laser.transform.position = new Vector2(transform.position.x, transform.position.y + yAmount);
+    }
+
+    internal void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

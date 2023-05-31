@@ -9,8 +9,14 @@ public class BossGuns : Enemy
     EnemyGunController _gunController;
     float MAX_DELAY = 1;
     float _shootDelay;
-    int _life = 3;
-
+    int _life;
+    private const int MAX_LIFE = 3;
+    [SerializeField]
+    bool _canShoot = true;
+    private void OnEnable()
+    {
+        _life = MAX_LIFE;
+    }
     public override void Damaged(int amount)
     {
         _life--;
@@ -18,8 +24,13 @@ public class BossGuns : Enemy
         {
             Animator animator = GetComponent<Animator>();
             animator.SetTrigger("Die");
-            Destroy(gameObject, 0.7f); ;
+            // Destroy(gameObject, 0.7f); ;
+            Invoke("SetDisabled", 0.7f);
         }
+    }
+    void SetDisabled()
+    {
+        gameObject.SetActive(false);
     }
 
     // Start is called before the first frame update
@@ -37,7 +48,7 @@ public class BossGuns : Enemy
         var angle = Mathf.Atan2(direction.y, direction.x)*Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         int randomFire = Random.Range(0, 50);
-        if(randomFire> 25&&_shootDelay<=0)
+        if(randomFire> 25&&_shootDelay<=0&&_canShoot)
         {
             _shootDelay = MAX_DELAY;
             _gunController.Shoot(Vector2.left);

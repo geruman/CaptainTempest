@@ -10,4 +10,5 @@ public abstract class Enemy : MonoBehaviour
         return (transform.position.x < 9.3f);
     }
     public abstract void Damaged(int amount);
+    
 }

@@ -37,7 +37,13 @@ public class FinalEnemyController : Enemy
     private bool goingUp = true;
     private Animator _animator;
     private bool _vulnerable;
+    [SerializeField]
+    private GameObject finalGun;
 
+    public void EnableFinalGun()
+    {
+        finalGun.SetActive(true);
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -55,48 +61,23 @@ public class FinalEnemyController : Enemy
     }
     private void FixedUpdate()
     {
-        guns.transform.Rotate(new Vector3(0, 0, ROTATION_SPEED*Time.fixedDeltaTime));
+        
     }
+
+    private void RotateFirstStageGuns(float delta)
+    {
+        guns.transform.Rotate(new Vector3(0, 0, ROTATION_SPEED*delta));
+    }
+
     // Update is called once per frame
     void Update()
     {
         _delayLazer -= Time.deltaTime;
+        RotateFirstStageGuns(Time.deltaTime);
         HandleLazers();
-        float newY = transform.position.y;
-        if (goingUp)
-        {
-            if (transform.position.y<=MAX_Y-0.01)
-            {
-                newY = Mathf.Lerp(transform.position.y, MAX_Y, Time.deltaTime);
-
-            }
-            else
-            {
-                goingUp = false;
-            }
-        }
-        else
-        {
-            if (transform.position.y>=MIN_Y+0.01)
-            {
-                newY = Mathf.Lerp(transform.position.y, MIN_Y, Time.deltaTime);
-            }
-            else
-            {
-                goingUp = true;
-            }
-        }
-        transform.position = new Vector2(transform.position.x, newY);
-        if (guns.GetComponentsInChildren<BossGuns>().Length == 0&&!_vulnerable && _life == 50)
-        {
-            _vulnerable = true;
-            _animator.SetTrigger("BecomeVulnerable");
-        }
-        if (_life==25)
-        {
-            _life--;
-            _animator.SetTrigger("BackToInvulnerable");
-        }
+        MoveUpAndDown();
+        WillBecomeVulnerable();
+        IfBackToInvulnerable();
         return;
         _rotationFireDegrees = _rotationFireDegrees+0.7f;
 
@@ -143,6 +124,54 @@ public class FinalEnemyController : Enemy
 
 
     }
+
+    private void IfBackToInvulnerable()
+    {
+        if (_life==25)
+        {
+            _life--;
+            _animator.SetTrigger("BackToInvulnerable");
+        }
+    }
+
+    private void WillBecomeVulnerable()
+    {
+        if (guns.GetComponentsInChildren<BossGuns>().Length == 0&&!_vulnerable && _life == 50)
+        {
+            _vulnerable = true;
+            _animator.SetTrigger("BecomeVulnerable");
+        }
+    }
+
+    private void MoveUpAndDown()
+    {
+        float newY = transform.position.y;
+        if (goingUp)
+        {
+            if (transform.position.y<=MAX_Y-0.01)
+            {
+                newY = Mathf.Lerp(transform.position.y, MAX_Y, Time.deltaTime);
+
+            }
+            else
+            {
+                goingUp = false;
+            }
+        }
+        else
+        {
+            if (transform.position.y>=MIN_Y+0.01)
+            {
+                newY = Mathf.Lerp(transform.position.y, MIN_Y, Time.deltaTime);
+            }
+            else
+            {
+                goingUp = true;
+            }
+        }
+        transform.position = new Vector2(transform.position.x, newY);
+    }
+
     void HandleLazers()
     {
         if (_delayLazer<=0)
