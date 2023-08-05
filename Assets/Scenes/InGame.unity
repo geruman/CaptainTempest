@@ -7514,6 +7514,10 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1767014817}
+    - target: {fileID: 6028353609920052776, guid: ad3420fa914eda54bb008b9960563136, type: 3}
+      propertyPath: _life
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6028353609920052777, guid: ad3420fa914eda54bb008b9960563136, type: 3}
       propertyPath: m_Name
       value: NewFinalEnemy
