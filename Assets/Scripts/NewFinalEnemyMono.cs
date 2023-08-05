@@ -19,7 +19,7 @@ public class NewFinalEnemyMono : Enemy
     Animator _animator;
     private bool _vulnerable = false;
     [SerializeField]
-    private int _life = 16;
+    private int _life = 25;
     private int _moveSpeed = 3;
     private FinalEnemyFases _currentFase = FinalEnemyFases.ZERO;
     [SerializeField]
@@ -42,7 +42,7 @@ public class NewFinalEnemyMono : Enemy
     // Update is called once per frame
     void Update()
     {
-        switch (_currentFase)
+       switch (_currentFase)
         {
             case FinalEnemyFases.ZERO:
                 ZeroFaseMotions();
@@ -51,7 +51,7 @@ public class NewFinalEnemyMono : Enemy
                 FirstFaseMotions();
                 break;
             case FinalEnemyFases.SECOND:
-                SecondFaseMotion();
+                MoveUpAndDown();
                 break;
             case FinalEnemyFases.THIRD:
                 MoveUpAndDown();
@@ -61,14 +61,14 @@ public class NewFinalEnemyMono : Enemy
 
     private void SecondFaseMotion()
     {
-        MoveUpAndDown();
+        
     }
 
     private void BackToInvulnerable()
     {
 
         _vulnerable = false;
-        if (_life > 8)
+        if (_life > 15)
         {
             _animator.SetTrigger("BackToInvulnerable");
 
